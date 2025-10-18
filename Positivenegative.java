@@ -5,10 +5,12 @@ import java.util.Scanner;
 public class Positivenegative {
 	public static void main(String[] args) {
 			Scanner s=new Scanner(System.in);
-			System.out.println("enter number");
-			int n=s.nextInt();
-			String result=(n>0)?"positive":"Negative";
-			System.out.println(result);
+			System.out.println("enter amount");
+			double n=s.nextDouble();
+			double discount=(n>100)?n*0.2:((n>=50)?n*0.1:n*0.0);
+			double rm=n-discount;
+			System.out.println("The discount amount is: "+discount);
+			System.out.println("The remaining amount after discount is :"+rm);
 			s.close();
 
 	}
